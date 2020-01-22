@@ -13,9 +13,14 @@ void main() {
  y2=2*x0-4;
  h=(y1/y2);
  x0=x0-h;
+  if(y2==0){
+   printf("method fails");
+   break;
+  }
+  else{
   printf("x%d= %lf\n",i+1,x0);
  }
-
+ }
  getch();
 
 }
