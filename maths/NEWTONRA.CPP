@@ -1,3 +1,6 @@
+////To find root of given algebraic/transcedental equation in the given/user-input interval using Newton Raphson method. 
+
+
 #include<stdio.h>
 #include<conio.h>
 #include<math.h>
