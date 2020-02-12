@@ -3,13 +3,13 @@
 #include<math.h>
 void main() {
 double a,b,n,h,s,area;
-double v[10],f[10];
+double v[10],f[10]; 
 int i;
 clrscr();
 printf("enter lower limit,upper limit and number of intervals");
-scanf("%lf%lf%lf",&a,&b,&n);
-h=(b-a)/n;
-v[0]=a;
+scanf("%lf%lf%lf",&a,&b,&n);                                         // n should be multiple of 2 for accurate results
+h=(b-a)/n;                                                           // reason: unequal distribution while multiplying with 2 or 4
+v[0]=a;                                                              // so result may get biased/deviated from actual answer.
 for(i=0;i<=n;i++){
 v[i+1]=v[i]+h;
 //printf("%lf\n",v[i]);
