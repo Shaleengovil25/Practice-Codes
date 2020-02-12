@@ -7,7 +7,7 @@ double v[10],f[10];
 int i;
 clrscr();
 printf("enter lower limit,upper limit and number of intervals");
-scanf("%lf%lf%lf",&a,&b,&n);
+scanf("%lf%lf%lf",&a,&b,&n);                                                // for accurate answer, n should be a multiple of 3
 h=(b-a)/n;
 v[0]=a;
 for(i=0;i<=n;i++){
