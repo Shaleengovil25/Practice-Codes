@@ -1,3 +1,8 @@
+// given:                        TO find:
+// dy/dx=x+y+x*y                  y(0.1)     
+// y(0)=1
+// h=0.025
+
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
