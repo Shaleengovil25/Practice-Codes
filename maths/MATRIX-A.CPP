@@ -1,12 +1,16 @@
+// Menu-driven programm to perform matrix algebra.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+
 void display (int arr1[3][3], int arr2[3][3]);
 int add      (int arr1[3][3], int arr2[3][3]);
 int subtract (int arr1[3][3], int arr2[3][3]);
 int transpose(int arr1[3][3], int arr2[3][3]);
 int multiply (int arr1[3][3], int arr2[3][3]);
 
+// Global Declaration
 int i,j;
 int arr1[3][3], arr2[3][3], arr3[3][3] ;
 
@@ -57,8 +61,9 @@ while(x<6) ;
 
 }
 
-//   Function definition
-      
+                                                   //   --Function definition-->
+// DISPLAY
+
 void display (int arr1[3][3], int arr2[3][3]) {
     printf("Entered matrix-1 is:\n");
     for(i=0;i<3;i++){
@@ -77,6 +82,8 @@ void display (int arr1[3][3], int arr2[3][3]) {
     
 }
 
+// ADDITION
+
 int add (int arr1[3][3], int arr2[3][3]) {
     
     for(i=0;i<3;i++){
@@ -89,6 +96,8 @@ int add (int arr1[3][3], int arr2[3][3]) {
     }
 }
 
+// SUBTRACTION
+
 int subtract (int arr1[3][3], int arr2[3][3]) {
     
     for(i=0;i<3;i++){
@@ -100,6 +109,8 @@ int subtract (int arr1[3][3], int arr2[3][3]) {
         printf("\n");
     }
 }
+
+// MULTIPLICATION
 
 int multiply (int arr1[3][3], int arr2[3][3]) {
     int k,sum;
@@ -121,6 +132,8 @@ int multiply (int arr1[3][3], int arr2[3][3]) {
     printf("\n");
     }
 }
+
+// TRANSPOSE
 
 int transpose (int arr1[3][3], int arr2[3][3]) {
     
