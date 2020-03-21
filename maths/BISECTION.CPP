@@ -1,4 +1,4 @@
-//To find root of given algebraic/transcedental equation in the given/user-input interval using bisection method. 
+//To find root of given algebraic/transcendental equation in the given/user-input interval using bisection method. 
 
 #include<stdio.h>
 #include<conio.h>
