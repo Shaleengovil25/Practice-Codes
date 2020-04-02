@@ -1,3 +1,5 @@
+// Program for DFA accepting the string that contains even number of 0 over the input of {0,1}.
+
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
