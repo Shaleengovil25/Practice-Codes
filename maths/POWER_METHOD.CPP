@@ -15,7 +15,7 @@ void main()
 	    scanf("%f",&a[i][j]);
 	}
     }
-// It will be a 3 by 1 Column Matrix, You can fill it with any values you want.
+// It will be a 3 by 1 Column Matrix, You can fill it with any values you want except 0,0,0.
     printf("Enter the value of initial aproximated eighen vectors:\n");
     for(i=0; i<3; i++) {
 	scanf("%f",&x[i]);
