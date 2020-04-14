@@ -1,3 +1,5 @@
+// To find Eighenvalue and EighenVectors for a given Matrix By Power Method. 
+
 #include<stdio.h>
 #include<conio.h>
 #include<math.h>
@@ -13,10 +15,12 @@ void main()
 	    scanf("%f",&a[i][j]);
 	}
     }
+// It will be a 3 by 1 Column Matrix, You can fill it with any values you want.
     printf("Enter the value of initial aproximated eighen vectors:\n");
     for(i=0; i<3; i++) {
 	scanf("%f",&x[i]);
     }
+// Multiplying above 2 matrix gives matrix z (3 by 1) that will be more near to our desired eighenvector matrix after an operation.
     do
     {
 	for(i=0; i<3; i++)
@@ -27,16 +31,19 @@ void main()
 		z[i]=z[i]+a[i][j]*x[j];
 	    }
 	}
+// fabs() is same as abs() for float type.	    
 	zmax=fabs(z[0]);
 	for(i=1; i<3; i++)
 	{
 	    if((fabs(z[i]))>zmax)
 		zmax=fabs(z[i]);
 	}
+// The operation I talked earlier.	    
 	for(i=0; i<3; i++)
 	{
 	    z[i]=z[i]/zmax;
 	}
+// Calculating error	    
 	for(i=0; i<3; i++)
 	{
 	    e[i]=0;
