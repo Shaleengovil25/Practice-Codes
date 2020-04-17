@@ -1,21 +1,24 @@
-#include<stdio.h>
-#include<conio.h>
-void main()
+#include <stdio.h>
+
+int main()
 {
-int a[10];
-int i,k,j;
-clrscr();
-printf("Enter 5 elements\n");
-for(i=0;i<5;i++)
-scanf("%d",&a[i]);
-for(i=0;i<5;i++)
-printf("%d\t\t",a[i]);
-printf("enter position of element to be deleted");
-scanf("%d",&k);
-for(i=k-1;i<4;i++)
-a[i]=a[i+1];
-printf("After Deletion\n");
-for(i=0;i<4;i++)
-printf("%d\t\t",a[i]);
-getch();
+    int k,r,n,rev;
+    printf("Enter a number:\n");
+    scanf("%d",&k);
+    rev = 0;
+    n = k;
+    while(n!=0){
+        r = n%10;
+        rev = rev *10 + r;
+        n = n/10;
+    }
+    
+    if(k == rev){
+        printf("yes,%d is a pallindrome",rev );    
+    }
+    else{
+        printf("no,%d is not a pallindrome",k);
+    }
+
+    return 0;
 }
