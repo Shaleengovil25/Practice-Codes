@@ -34,3 +34,38 @@ int main(){
     
     return 0;
 }
+
+
+// To find strong number below n.
+
+#include<stdio.h>
+
+int fact(int r){
+int x = 1;
+for(int k=1; k<=r; k++){
+x*=k;
+}
+return x;
+}
+
+void main() {
+int n,i,r,f,j ;
+int sum = 0;
+
+scanf("%d",&n);
+printf("Strong number below %d are\n",n);
+for(i=1;i<n;i++){
+j = i;
+while(j!=0){
+r = j%10;
+f = fact(r);
+sum +=f;
+j = j/10;
+}
+if(i == sum){
+printf("%d\n",i);
+}
+sum = 0;
+}
+
+}
