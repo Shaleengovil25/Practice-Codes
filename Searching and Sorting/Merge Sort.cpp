@@ -3,11 +3,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void Merge(int a[],int lb,int mid,int ub,int n){
+void Merge(int a[],int lb,int mid,int ub){
     int i = lb;
     int j = mid+1;
-    int k = lb;
-    int b[n];
+    int k = 0;
+    int b[ub-lb+1];
     while(i<=mid && j<=ub){
         if(a[i] <= a[j]){
             b[k] = a[i];
@@ -34,18 +34,18 @@ void Merge(int a[],int lb,int mid,int ub,int n){
         }
     }
     
-    for(int i=lb;i<=ub;i++){
-        a[i] = b[i];
+    for(int i=lb,k=0;i<=ub;i++,k++){
+        a[i] = b[k];
     }
     
 }
 
-void MergeSort(int arr[],int lb,int ub,int n){
+void MergeSort(int arr[],int lb,int ub){
     if(lb < ub){
         int mid = lb+ ((ub-lb)/2);
-        MergeSort(arr,lb,mid,n);
-        MergeSort(arr,mid+1,ub,n);
-        Merge(arr,lb,mid,ub,n);
+        MergeSort(arr,lb,mid);
+        MergeSort(arr,mid+1,ub);
+        Merge(arr,lb,mid,ub);
     }
 }
 
@@ -64,7 +64,7 @@ int main() {
 	}
 	int lower_bound = 0;
 	int upper_bound = n-1;
-	MergeSort(arr,lower_bound,upper_bound,n);
+	MergeSort(arr,lower_bound,upper_bound);
 	Print(arr,n);
 	delete[] arr;
 	return 0;
