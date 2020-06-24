@@ -1,5 +1,6 @@
 APPROACH 1: Time O(n) Space O(n)
 
+#include <iostream>
 void reverse_arr(int arr[],int n){
     int arr2[4];
     for(int i=0;i<4;i++){
@@ -32,3 +33,24 @@ int main(){
   }
   return 0;
 }
+
+APPROACH 3: Time O(n) Space O(n)
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+int main() {
+
+	int arr[] = {1,2,4,3,5};
+	string s="";
+	for(int i=0;i<5;i++){
+	    s += to_string(arr[i]);
+	}
+	reverse(s.begin(),s.end());
+	cout << s;
+	return 0;
+}
+
+
+OUTPUT: 53421
+
