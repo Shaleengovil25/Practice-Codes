@@ -1,4 +1,4 @@
-//Time O(nlogn) Space O(logn)
+//Time O(nlogn) Space O(n)
 
 #include <bits/stdc++.h>
 using namespace std;
