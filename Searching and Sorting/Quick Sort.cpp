@@ -1,4 +1,4 @@
-//Time O(n^2) omega(nlogn) Space O(1)
+//Time O(n^2) omega(nlogn) Space O(1ogn)**
 #include <iostream>
 #include <utility>
 using namespace std;
@@ -57,7 +57,13 @@ OUTPUT:
 1 2 3 4 5
 
 Performance Analysis:
-Depends upon partitioning of array, if after first partition, the pivot element goes to n/2th or n/4th index, it will work like mergesort
+Depends upon partitioning of array, if after first partition, the pivot element goes to (n/2)th or (n/4)th index, it will work like mergesort
 in O(nlogn) time, however in case of completely sorted or completely unsorted (sorted in non-decreasing order) array, only one recursive call will be there at a time,
 so it will run in O(n^2) time.
 Worst case recurrence relation: T(n) = T(n-1) + n.
+Best case recurrence relation: T(n) = T(n/2) + n.[same as merge sort]
+Average case recurrence relation: T(n) = T(n/9) + T(9n/10).
+
+**
+In worst case there will be 'n' function calls in the call stack, so space complexity is O(n), Howewver using Tail call optimization, we can put an upper bound of O(logn)
+on the space complexity.
