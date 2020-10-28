@@ -46,16 +46,21 @@ void lcs(string s1, string s2, int m, int n){
     
 }
 
-int main(){
+int main(){    
     string s1,s2;
-    cin >> s1 >> s2;
+    cout << "Enter vertical string" << endl;
+    cin >> s1;
+    cout << "Enter horizontal string" << endl;
+    cin >> s2;
     lcs(s1,s2,s1.length(),s2.length());
    
     return 0;
 }
 
 
+Enter vertical string
 abcbdab
+Enter horizontal string
 bdcdaba
 LCS of abcbdab and bdcdaba is bcdab
 Length of LCS: 5
