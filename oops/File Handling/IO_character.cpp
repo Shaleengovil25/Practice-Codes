@@ -36,3 +36,9 @@ fstream can handle both input output simultaneously.
 after writing the file pointer reached to EOF so we need to bring it back to start of file,
 we do it so by .seekg(0)
 */
+
+
+Enter a String: 
+ProgrammingIsFun!
+Storing in file...
+Reading File content: ProgrammingIsFun!
