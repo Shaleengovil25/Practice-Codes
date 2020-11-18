@@ -13,7 +13,7 @@ int main(){
     for(int i=0;i<3;i++){
         if(fin1.eof()!=0){             // check EOF
             cout << "exit from country\n";
-            
+            exit(1);
         }
 
         fin1.getline(line, 100);                    // read line
@@ -21,7 +21,7 @@ int main(){
 
         if(fin2.eof()!=0){
             cout << "exit from capital\n";
-            
+            exit(1);
         }
 
         fin2.getline(line,100);
@@ -35,3 +35,6 @@ int main(){
 Capital of India is New Delhi
 Capital of United States of America is Washington
 Capital of South Korea is Seoul
+
+
+NOTE: .eof() returns non-zero value if EOF is encountered, Zero otherwise.
