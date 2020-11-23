@@ -6,7 +6,7 @@ using namespace std;
 int main(){
     int number;
     string name;
-    map<string, int> Phone;
+    map<string, int> Phone;    // map<key,value>
     cout << "Enter 3 name and numbers: " << endl;
     for(int i=0;i<3;i++){
         cin >> name;
@@ -43,3 +43,7 @@ Shaleen 28
 Find roll of: (enter name)
 Aranaya
 Aranaya roll is:8
+    
+    
+ 
+NOTE that the keys (name) are sorted automatically as map by default is a ordered_map.
