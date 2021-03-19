@@ -52,9 +52,11 @@ Output:
 2 3 3 4 5
 (unstable)
 
-- Time complexity of heapify function is O(logn)
-- Time complexity of Building/deleting heap is O(n)
+- Time complexity of heapify function is O(n)
+- Time complexity of Building heap (using heapify)is O(n)
+- Time complexity of Deleting heap is O(nlogn)
 - So overall time complexity is O(nlogn)
+	
 - It's main competitors are merge and quick sort algorithms, in-practice order of preference: quick > merge > heap.  Why?***
 - Heap sort is used in Priority Queues and Order Statistics. (https://www.geeksforgeeks.org/applications-of-heap-data-structure/)
 
